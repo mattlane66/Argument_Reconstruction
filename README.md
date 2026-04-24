@@ -4,6 +4,11 @@ Evaluate a belief, position, argument, or construct one with Argument Reconstruc
 
 This repo contains one full workflow skill plus modular skills for each phase of argument reconstruction.
 
+## Source
+
+These skills were produced from the Argument Reconstruction Cheat Sheet Google Sheet:
+https://docs.google.com/spreadsheets/d/1eRLUrRjX30EiagfuRe9iI6Hkbqf2VmcZxADdAhir1rk/edit?usp=sharing
+
 ## Recommended use
 
 Use `argument_reconstruction_full/SKILL.md` when you want one comprehensive skill. Use the modular skills when you want a GPT or agent to call a narrower procedure for a specific step.
@@ -20,6 +25,12 @@ Use `argument_reconstruction_full/SKILL.md` when you want one comprehensive skil
 8. `reconstruct_counterexample`
 9. `reconstruct_fallacy_check`
 10. `reconstruct_reality_check`
+
+## Supporting files
+
+- `custom_gpt_instruction_block.md` — reusable instruction block for Custom GPTs or agent prompts.
+- `manifest.json` — relative file manifest for developers and tool routing.
+- `examples/` — example input and expected output for regression-style testing.
 
 ## Default input
 
