@@ -1,2 +1,45 @@
-# Argument_Reconstruction
-Evaluate a belief, position, argument or construct one with the Argument Reconstruction to improve your pragmatic and epistemic reasoning.
+# Argument Reconstruction Skill Pack
+
+Evaluate a belief, position, argument, or construct one with Argument Reconstruction to improve pragmatic and epistemic reasoning.
+
+This repo contains one full workflow skill plus modular skills for each phase of argument reconstruction.
+
+## Recommended use
+
+Use `argument_reconstruction_full/SKILL.md` when you want one comprehensive skill. Use the modular skills when you want a GPT or agent to call a narrower procedure for a specific step.
+
+## Skills included
+
+1. `argument_reconstruction_full`
+2. `reconstruct_charity`
+3. `reconstruct_conclusion`
+4. `reconstruct_premises`
+5. `reconstruct_hidden_bridge`
+6. `reconstruct_linkage`
+7. `reconstruct_removal_test`
+8. `reconstruct_counterexample`
+9. `reconstruct_fallacy_check`
+10. `reconstruct_reality_check`
+
+## Default input
+
+A user may provide a belief, claim, position, policy proposal, paragraph, debate statement, comment, or rough argument.
+
+## Default output
+
+The full skill returns:
+
+- Charitable restatement
+- Conclusion
+- Explicit premises
+- Hidden bridge
+- Argument linkage
+- Removal test
+- Counterexample
+- Shortcut or fallacy check
+- Validity, strength, cogency, or soundness assessment
+- Best next questions or evidence needed
+
+## Example theme used in the source sheet
+
+School should start later because students are tired, later start times may increase teen sleep, and improved sleep may improve attention, learning, mental health, or driving safety.
