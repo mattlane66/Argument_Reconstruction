@@ -1,24 +1,32 @@
 {
   "name": "argument_reconstruction_skill_pack",
   "version": "1.0.0",
-  "source": "Argument Reconstruction Cheat Sheet Google Sheet",
+  "source": {
+    "name": "Argument Reconstruction Cheat Sheet Google Sheet",
+    "url": "https://docs.google.com/spreadsheets/d/1eRLUrRjX30EiagfuRe9iI6Hkbqf2VmcZxADdAhir1rk/edit?usp=sharing"
+  },
   "skills": [
-    "/mnt/data/argument_reconstruction_skill_pack/argument_reconstruction_full",
-    "/mnt/data/argument_reconstruction_skill_pack/reconstruct_charity",
-    "/mnt/data/argument_reconstruction_skill_pack/reconstruct_conclusion",
-    "/mnt/data/argument_reconstruction_skill_pack/reconstruct_premises",
-    "/mnt/data/argument_reconstruction_skill_pack/reconstruct_hidden_bridge",
-    "/mnt/data/argument_reconstruction_skill_pack/reconstruct_linkage",
-    "/mnt/data/argument_reconstruction_skill_pack/reconstruct_removal_test",
-    "/mnt/data/argument_reconstruction_skill_pack/reconstruct_counterexample",
-    "/mnt/data/argument_reconstruction_skill_pack/reconstruct_fallacy_check",
-    "/mnt/data/argument_reconstruction_skill_pack/reconstruct_reality_check"
+    "argument_reconstruction_full/SKILL.md",
+    "reconstruct_charity/SKILL.md",
+    "reconstruct_conclusion/SKILL.md",
+    "reconstruct_premises/SKILL.md",
+    "reconstruct_hidden_bridge/SKILL.md",
+    "reconstruct_linkage/SKILL.md",
+    "reconstruct_removal_test/SKILL.md",
+    "reconstruct_counterexample/SKILL.md",
+    "reconstruct_fallacy_check/SKILL.md",
+    "reconstruct_reality_check/SKILL.md"
   ],
-  "recommended_installation": "Copy this entire folder into a repo, GPT configuration, or local skills directory. Use argument_reconstruction_full for the complete workflow, or individual modular skills for narrower tool routing.",
-  "custom_gpt_instruction_block": "/mnt/data/argument_reconstruction_skill_pack/custom_gpt_instruction_block.md",
+  "custom_gpt_instruction_block": "custom_gpt_instruction_block.md",
+  "examples": [
+    "examples/school-start-times/input.md",
+    "examples/school-start-times/expected_output.md"
+  ],
+  "recommended_installation": "Copy this repo or the desired skill folders into a GPT configuration, local skills directory, or agent skills directory. Use argument_reconstruction_full/SKILL.md for the complete workflow, or individual modular skills for narrower tool routing.",
   "notes": [
     "Each skill includes YAML front matter for name and description.",
     "The full workflow skill contains the complete reconstruction sequence.",
-    "The modular skills are designed for targeted agent calls."
+    "The modular skills are designed for targeted agent calls.",
+    "The examples folder provides a basic regression fixture for developer testing."
   ]
 }
