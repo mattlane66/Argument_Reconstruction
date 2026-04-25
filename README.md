@@ -1,6 +1,6 @@
 # Argument Reconstruction Skill Pack
 
-Evaluate a belief, position, argument, or construct one with Argument Reconstruction to improve pragmatic and epistemic reasoning. Use cases: Evaluate a news article, a point someone made that you disagree with, or a point you made that you agree with but want to improve, and so on.
+Evaluate a belief, position, argument, or construct one with Argument Reconstruction to improve pragmatic and epistemic reasoning. Use cases: Evaluate a news article, a point someone made that you disagree with, or a point you made that you agree with but want to improve, and so on. You can quickly get a sense of the Argument Reconstruction Skill [here](https://chatgpt.com/g/g-69ebcf01f7dc819188dbb0c0161268ef-argument-reconstruction).
 
 This repo contains one full workflow skill plus modular skills for each phase of argument reconstruction.
 
