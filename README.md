@@ -4,6 +4,8 @@ Evaluate a belief, position, argument, or construct one with Argument Reconstruc
 
 This repo contains one full workflow skill plus modular skills for each phase of argument reconstruction.
 
+<img width="552" height="556" alt="images" src="https://github.com/user-attachments/assets/052a909d-9d3d-4697-999c-9f9e877c81da" />
+
 ## Source
 
 These skills were produced from my Argument Reconstruction Cheat Sheet Google Sheet:
