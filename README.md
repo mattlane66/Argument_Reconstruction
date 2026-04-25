@@ -1,12 +1,12 @@
 # Argument Reconstruction Skill Pack
 
-Evaluate a belief, position, argument, or construct one with Argument Reconstruction to improve pragmatic and epistemic reasoning.
+Evaluate a belief, position, argument, or construct one with Argument Reconstruction to improve pragmatic and epistemic reasoning. Use cases: Add a news article link, a point someone made that you disagree with, or a point you made that you agree with but want to improve, and so on.
 
 This repo contains one full workflow skill plus modular skills for each phase of argument reconstruction.
 
 ## Source
 
-These skills were produced from the Argument Reconstruction Cheat Sheet Google Sheet:
+These skills were produced from my Argument Reconstruction Cheat Sheet Google Sheet:
 https://docs.google.com/spreadsheets/d/1eRLUrRjX30EiagfuRe9iI6Hkbqf2VmcZxADdAhir1rk/edit?usp=sharing
 
 ## Recommended use
