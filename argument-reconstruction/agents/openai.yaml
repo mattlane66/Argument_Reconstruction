@@ -1,0 +1,4 @@
+interface:
+  display_name: "Argument Reconstruction"
+  short_description: "Reconstruct, map, strengthen, and evaluate arguments"
+  default_prompt: "Use $argument-reconstruction to reconstruct and evaluate this argument."

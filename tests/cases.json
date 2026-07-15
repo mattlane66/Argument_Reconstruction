@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "claim-only",
+      "input": "Remote work is better.",
+      "required_moves": [
+        "Identify the statement as a conclusion or claim without supplied supporting reasons.",
+        "Offer a hypothetical reconstruction only if clearly labeled as hypothetical."
+      ],
+      "prohibited_moves": [
+        "Invent explicit premises and attribute them to the speaker.",
+        "Classify the nonexistent inference as valid, sound, strong, or cogent."
+      ]
+    },
+    {
+      "id": "valid-deduction",
+      "input": "All mammals are warm-blooded. Whales are mammals. Therefore, whales are warm-blooded.",
+      "required_moves": [
+        "Classify the inference as deductive and valid.",
+        "Evaluate premise truth separately before assessing soundness."
+      ],
+      "prohibited_moves": [
+        "Treat validity and premise truth as the same question.",
+        "Invent a countermodel that changes the meanings of the terms."
+      ]
+    },
+    {
+      "id": "invalid-deduction",
+      "input": "All cats are mammals. All dogs are mammals. Therefore, all dogs are cats.",
+      "required_moves": [
+        "Classify the inference as deductive and invalid.",
+        "Give a premises-true conclusion-false countermodel."
+      ],
+      "prohibited_moves": [
+        "Call the argument sound because its premises are true.",
+        "Treat sharing a category as establishing identity."
+      ]
+    },
+    {
+      "id": "statistical-induction",
+      "input": "Nine of the ten apples I sampled from this crate were ripe, so the next apple I draw will probably be ripe.",
+      "required_moves": [
+        "Classify the conclusion as probabilistic rather than deductively guaranteed.",
+        "Assess sample size, selection, representativeness, and calibration."
+      ],
+      "prohibited_moves": [
+        "Call one possible unripe apple a deductive refutation of the probabilistic claim.",
+        "Call the inference valid or invalid without qualification."
+      ]
+    },
+    {
+      "id": "causal-post-hoc",
+      "input": "Sales increased immediately after the website redesign, so the redesign caused the increase.",
+      "required_moves": [
+        "Identify the causal inference.",
+        "Check confounding, seasonality, concurrent changes, measurement, and the missing counterfactual."
+      ],
+      "prohibited_moves": [
+        "Treat temporal sequence alone as sufficient for causation.",
+        "Dismiss causation solely by naming post hoc without explaining the gap."
+      ]
+    },
+    {
+      "id": "abductive-rivals",
+      "input": "The entire block is dark and my lights went out at the same moment, so a neighborhood power outage is the best explanation.",
+      "required_moves": [
+        "Classify the reasoning as abductive or explanatory.",
+        "Compare the outage hypothesis with plausible rivals using evidence fit and scope."
+      ],
+      "prohibited_moves": [
+        "Treat hard-to-vary quality as the only explanatory criterion.",
+        "Call the explanation deductively proved."
+      ]
+    },
+    {
+      "id": "policy-normative-bridge",
+      "input": "School should start later because students are tired in first period.",
+      "required_moves": [
+        "Separate the empirical causal assumptions from the normative decision rule.",
+        "Identify evidence, alternatives, feasibility, benefits, costs, and distributional effects needed for the policy assessment."
+      ],
+      "prohibited_moves": [
+        "Require that start time be the sole or main cause when material contribution would suffice.",
+        "Label insufficient support as a linkage structure."
+      ]
+    },
+    {
+      "id": "mixed-linkage",
+      "input": "The proposal lowers costs, which will reduce the deficit. It also independently improves safety. Therefore, we should adopt it if those gains outweigh its implementation harms.",
+      "required_moves": [
+        "Map lowering costs to reducing the deficit as serial support.",
+        "Map deficit reduction and safety improvement as convergent benefits.",
+        "Treat the net-benefit condition as a linked decision bridge at the final step."
+      ],
+      "prohibited_moves": [
+        "Assign one structure to the entire argument without mapping local relationships.",
+        "Use overall sufficiency to determine topology."
+      ]
+    },
+    {
+      "id": "equivocation",
+      "input": "Nothing is better than good health. A sandwich is better than nothing. Therefore, a sandwich is better than good health.",
+      "required_moves": [
+        "Identify the shift in the meaning or logical role of nothing.",
+        "Explain why the apparent inference fails before naming equivocation."
+      ],
+      "prohibited_moves": [
+        "Treat the repeated word as having one stable meaning.",
+        "Give only a fallacy label without diagnosing the shift."
+      ]
+    },
+    {
+      "id": "analogy",
+      "input": "A company is like a family, so employees should obey the CEO as children obey a parent.",
+      "required_moves": [
+        "Identify the analogical transfer from family authority to workplace authority.",
+        "Test relevant similarities and material disanalogies, including consent, rights, and exit."
+      ],
+      "prohibited_moves": [
+        "Assume a metaphor establishes the transferred normative relation.",
+        "Reject the analogy merely because the cases are not identical."
+      ]
+    },
+    {
+      "id": "moral-deduction",
+      "input": "All deliberate deception is morally wrong. This prank deliberately deceives its target. Therefore, this prank is morally wrong.",
+      "required_moves": [
+        "Assess the deductive form separately from the normative premise.",
+        "Test the scope and defensibility of the universal moral rule."
+      ],
+      "prohibited_moves": [
+        "Classify the argument as merely inductive because its topic is moral.",
+        "Call the conclusion sound without assessing the normative premise."
+      ]
+    },
+    {
+      "id": "objection-and-rebuttal",
+      "input": "The city should restrict downtown cars because traffic pollution harms residents. Critics object that restrictions burden disabled residents. Proponents reply that disability permits would preserve access.",
+      "required_moves": [
+        "Separate the main policy argument, the objection, and the rebuttal.",
+        "Map which premise each objection attacks and whether the reply answers it."
+      ],
+      "prohibited_moves": [
+        "Flatten every statement into premises supporting one conclusion.",
+        "Treat the proposed permit reply as established fact without feasibility evidence."
+      ]
+    }
+  ]
+}

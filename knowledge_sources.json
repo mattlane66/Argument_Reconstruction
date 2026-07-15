@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "purpose": "Document the provenance and role of sources used to author or configure Argument Reconstruction without treating them as unquestionable authorities.",
+  "sources": [
+    {
+      "id": "argument-reconstruction-cheat-sheet",
+      "title": "Argument Reconstruction Cheat Sheet",
+      "author": "Matthew Lane",
+      "type": "Google Sheet",
+      "url": "https://docs.google.com/spreadsheets/d/1eRLUrRjX30EiagfuRe9iI6Hkbqf2VmcZxADdAhir1rk/edit?usp=sharing",
+      "role": "Original methodology source",
+      "included_in_repository": false,
+      "reuse_status": "Not specified in this repository"
+    }
+  ],
+  "custom_gpt_knowledge_attachments": {
+    "included_in_repository": false,
+    "documented_attachments": [],
+    "note": "Add the exact filename, title, author, edition or version, analytical role, and reuse status for each privately uploaded Knowledge attachment when documenting a particular GPT configuration. Do not add or redistribute third-party files without authorization."
+  }
+}

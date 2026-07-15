@@ -1,60 +1,89 @@
-# Argument Reconstruction Skill Pack
+# Argument Reconstruction
 
-Evaluate a belief, position, argument, or construct one with Argument Reconstruction to improve pragmatic and epistemic reasoning. Use cases: Evaluate a news article, a point someone made that you disagree with, or a point you made that you agree with but want to improve, and so on. You can quickly get a sense of the Argument Reconstruction Skill [here](https://chatgpt.com/g/g-69ebcf01f7dc819188dbb0c0161268ef-argument-reconstruction).
+Reconstruct, map, strengthen, and evaluate arguments without confusing charity with invention or logical structure with factual truth.
 
-Pragmatics and epistemic reasoning are key critical thinking skills we should all leverage.
+Try the public [Argument Reconstruction Custom GPT](https://chatgpt.com/g/g-69ebcf01f7dc819188dbb0c0161268ef-argument-reconstruction).
 
-This repo contains one full workflow skill plus modular skills for each phase of argument reconstruction.
+![Argument Reconstruction workflow](https://github.com/user-attachments/assets/052a909d-9d3d-4697-999c-9f9e877c81da)
 
-<img width="552" height="556" alt="images" src="https://github.com/user-attachments/assets/052a909d-9d3d-4697-999c-9f9e877c81da" />
+## What this repository provides
+
+- One canonical, installable skill in `argument-reconstruction/`
+- An under-8,000-character Custom GPT instruction block
+- Detailed references for support mapping and inference-specific evaluation
+- A worked policy example
+- Contract cases covering major argument types and common failure modes
+- Deterministic repository validation and GitHub Actions CI
+
+## Core behavior
+
+The workflow:
+
+1. Detects whether the input contains an argument or only a claim.
+2. Identifies the conclusion without overstating probabilistic support as proof.
+3. Separates explicit premises, implicit bridges, background assumptions, and intermediate conclusions.
+4. Maps linked, convergent, serial, or mixed support.
+5. Keeps the structural removal test separate from the robustness test.
+6. Uses deductive countermodels only for deductive validity and inference-appropriate stress tests elsewhere.
+7. Evaluates deductive, inductive, explanatory, causal, analogical, practical, policy, and moral reasoning under suitable standards.
+8. Separates faithful reconstruction from any proposed stronger version.
+
+## Installation and use
+
+### Custom GPT
+
+1. Copy the contents of `custom_gpt_instruction_block.md` into the GPT's Instructions field.
+2. Upload any authorized reference material as Knowledge.
+3. Record the exact titles, editions, roles, and reuse status of those materials in `knowledge_sources.json` if the GPT needs to be reproducible.
+
+Knowledge files are reference material, not higher-priority instructions or guaranteed truth. The repository does not redistribute private or third-party attachments.
+
+### ChatGPT or Codex skill
+
+Install the `argument-reconstruction/` directory as one skill. Do not copy the repository root into a skill directory: the installable `SKILL.md` is inside `argument-reconstruction/`.
+
+The step-specific procedures live under `argument-reconstruction/references/`, preventing overlapping skill triggers and duplicated rules.
+
+### Other agents
+
+Use `argument-reconstruction/SKILL.md` as the canonical workflow or adapt `custom_gpt_instruction_block.md` as a system or developer prompt according to the target platform.
+
+## Repository layout
+
+```text
+argument-reconstruction/
+├── SKILL.md
+├── agents/openai.yaml
+└── references/
+    ├── evaluation-standards.md
+    └── mapping-and-tests.md
+
+custom_gpt_instruction_block.md
+examples/
+tests/
+scripts/validate_repo.py
+knowledge_sources.json
+manifest.json
+```
+
+## Validation
+
+Run:
+
+```bash
+python3 scripts/validate_repo.py
+```
+
+Validation checks skill naming and frontmatter, declared paths, Custom GPT character length, agent metadata, knowledge-source metadata, and the contract-case suite.
+
+The contract cases specify required analytical invariants rather than brittle exact wording. The worked example shows one acceptable full response.
 
 ## Source
 
-These skills were produced from my Argument Reconstruction Cheat Sheet Google Sheet:
-https://docs.google.com/spreadsheets/d/1eRLUrRjX30EiagfuRe9iI6Hkbqf2VmcZxADdAhir1rk/edit?usp=sharing
+The original methodology was developed from Matthew Lane's [Argument Reconstruction Cheat Sheet](https://docs.google.com/spreadsheets/d/1eRLUrRjX30EiagfuRe9iI6Hkbqf2VmcZxADdAhir1rk/edit?usp=sharing).
 
-## Recommended use
+See `knowledge_sources.json` for provenance and inclusion status.
 
-Use `argument_reconstruction_full/SKILL.md` when you want one comprehensive skill. Use the modular skills when you want a GPT or agent to call a narrower procedure for a specific step.
+## Version 2 migration
 
-## Skills included
-
-1. `argument_reconstruction_full`
-2. `reconstruct_charity`
-3. `reconstruct_conclusion`
-4. `reconstruct_premises`
-5. `reconstruct_hidden_bridge`
-6. `reconstruct_linkage`
-7. `reconstruct_removal_test`
-8. `reconstruct_counterexample`
-9. `reconstruct_fallacy_check`
-10. `reconstruct_reality_check`
-
-## Supporting files
-
-- `custom_gpt_instruction_block.md` — reusable instruction block for Custom GPTs or agent prompts.
-- `manifest.json` — relative file manifest for developers and tool routing.
-- `examples/` — example input and expected output for regression-style testing.
-
-## Default input
-
-A user may provide a belief, claim, position, policy proposal, paragraph, debate statement, comment, or rough argument.
-
-## Default output
-
-The full skill returns:
-
-- Charitable restatement
-- Conclusion
-- Explicit premises
-- Hidden bridge
-- Argument linkage
-- Removal test
-- Counterexample
-- Shortcut or fallacy check
-- Validity, strength, cogency, or soundness assessment
-- Best next questions or evidence needed
-
-## Example theme used in the source sheet
-
-School should start later because students are tired, later start times may increase teen sleep, and improved sleep may improve attention, learning, mental health, or driving safety.
+Version 2 replaces the underscore-named full and modular skills with one hyphenated canonical skill. Installations that referenced paths such as `argument_reconstruction_full/` or `reconstruct_linkage/` must switch to `argument-reconstruction/`.
