@@ -1,32 +1,38 @@
 {
-  "name": "argument_reconstruction_skill_pack",
-  "version": "1.0.0",
+  "name": "argument-reconstruction",
+  "version": "2.0.0",
   "source": {
-    "name": "Argument Reconstruction Cheat Sheet Google Sheet",
+    "name": "Argument Reconstruction Cheat Sheet",
     "url": "https://docs.google.com/spreadsheets/d/1eRLUrRjX30EiagfuRe9iI6Hkbqf2VmcZxADdAhir1rk/edit?usp=sharing"
   },
   "skills": [
-    "argument_reconstruction_full/SKILL.md",
-    "reconstruct_charity/SKILL.md",
-    "reconstruct_conclusion/SKILL.md",
-    "reconstruct_premises/SKILL.md",
-    "reconstruct_hidden_bridge/SKILL.md",
-    "reconstruct_linkage/SKILL.md",
-    "reconstruct_removal_test/SKILL.md",
-    "reconstruct_counterexample/SKILL.md",
-    "reconstruct_fallacy_check/SKILL.md",
-    "reconstruct_reality_check/SKILL.md"
+    "argument-reconstruction/SKILL.md"
+  ],
+  "skill_resources": [
+    "argument-reconstruction/agents/openai.yaml",
+    "argument-reconstruction/references/evaluation-standards.md",
+    "argument-reconstruction/references/mapping-and-tests.md"
   ],
   "custom_gpt_instruction_block": "custom_gpt_instruction_block.md",
+  "knowledge_sources": "knowledge_sources.json",
   "examples": [
+    "examples/README.md",
     "examples/school-start-times/input.md",
     "examples/school-start-times/expected_output.md"
   ],
-  "recommended_installation": "Copy this repo or the desired skill folders into a GPT configuration, local skills directory, or agent skills directory. Use argument_reconstruction_full/SKILL.md for the complete workflow, or individual modular skills for narrower tool routing.",
+  "tests": [
+    "tests/README.md",
+    "tests/cases.json"
+  ],
+  "validation": "scripts/validate_repo.py",
+  "recommended_installation": {
+    "custom_gpt": "Paste custom_gpt_instruction_block.md into Instructions and upload authorized Knowledge separately.",
+    "chatgpt_or_codex_skill": "Install the argument-reconstruction directory as one skill.",
+    "generic_agent": "Use argument-reconstruction/SKILL.md as the canonical workflow."
+  },
   "notes": [
-    "Each skill includes YAML front matter for name and description.",
-    "The full workflow skill contains the complete reconstruction sequence.",
-    "The modular skills are designed for targeted agent calls.",
-    "The examples folder provides a basic regression fixture for developer testing."
+    "Version 2 consolidates overlapping modular skills into one canonical skill with references.",
+    "Contract cases define required analytical behavior without requiring exact prose.",
+    "Knowledge attachments are documented by provenance and are not automatically redistributed."
   ]
 }
